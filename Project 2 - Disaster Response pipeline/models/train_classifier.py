@@ -34,7 +34,7 @@ def load_data(database_filepath):
 
     #Create the SQL enginer connection and retrieve the cleaned up dataframe
     engine = create_engine('sqlite:///{}'.format(database_filepath))
-    df = pd.read_sql_table('InsertTableName', con=engine)
+    df = pd.read_sql_table('messages', con=engine)
 
     #Create the Features and Target for the model
     X = df['message']
