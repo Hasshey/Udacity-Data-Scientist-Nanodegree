@@ -47,7 +47,6 @@ def index():
     categories_counts = df.drop(columns=['id','message','original','genre']).sum().sort_values(ascending=False).head(5)
      
     # create visuals
-    # TODO: Below is an example - modify to create your own visuals
     graphs = [
         {
             'data': [
